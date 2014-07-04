@@ -14,10 +14,10 @@ Gem::Specification.new do |s|
   s.description = "Beespew is a naive spam protection plugin for rails using a honeypot"
   s.license     = "MIT"
 
-  spec.files         = `git ls-files`.split($/)
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = ["lib"]
+  s.files         = `git ls-files`.split($/)
+  s.executables   = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  s.test_files    = s.files.grep(%r{^(test|spec|features)/})
+  s.require_paths = ["lib"]
 
   s.add_dependency "rails", ">= 4.0", '<= 5.0'
 
