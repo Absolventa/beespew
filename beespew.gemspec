@@ -7,14 +7,17 @@ require "beespew/version"
 Gem::Specification.new do |s|
   s.name        = "beespew"
   s.version     = Beespew::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Beespew."
-  s.description = "TODO: Description of Beespew."
+  s.authors     = ["Carsten Zimmermann"]
+  s.email       = ["carsten.zimmermann@absolventa.de"]
+  s.homepage    = "https://github.com/Absolventa/beespew"
+  s.summary     = "Beespew is a naive spam protection plugin for rails using a honeypot"
+  s.description = "Beespew is a naive spam protection plugin for rails using a honeypot"
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  spec.files         = `git ls-files`.split($/)
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = ["lib"]
 
   s.add_dependency "rails", ">= 4.0", '<= 5.0'
 
