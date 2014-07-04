@@ -1,3 +1,5 @@
+require 'beespew/model'
+
 module Beespew
 
   mattr_accessor :attribute
