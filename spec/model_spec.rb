@@ -16,9 +16,20 @@ describe Beespew::Model do
     end
 
     it 'is invalid if honeypot is set' do
-      subject.send("#{honeypot}=", 'some data')
+      fill_honeypot!
       subject.valid?
       expect(subject.errors[:base]).to be_present
+    end
+  end
+
+  describe '#spam?' do
+    it 'returns false if honeypot is blank' do
+      expect(subject).not_to be_spam
+    end
+
+    it 'returns true if honeypot is blank' do
+      fill_honeypot!
+      expect(subject).to be_spam
     end
   end
 
@@ -27,6 +38,10 @@ describe Beespew::Model do
       include ActiveModel::Validations
       include Beespew::Model
     end
+  end
+
+  def fill_honeypot!
+    subject.send("#{honeypot}=", 'some data')
   end
 
   def honeypot
