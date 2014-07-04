@@ -1,6 +1,7 @@
 # Beespew
 
-This project rocks and uses MIT-LICENSE.
+**Beespew** is a lightweight spam protection plugin for Rails 4 using
+honeypot input fields. Beespew … honeypot … get it? :wink:
 
 ## Installation
 
