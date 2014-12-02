@@ -85,5 +85,8 @@ strong parameters will unwillingly disable your spam protection.
 
 ## Changelog
 
+### HEAD (not released yet)
+* Make Beespew.attribute configurable ([#1](https://github.com/Absolventa/beespew/issues/1))
+
 ### 0.1.0
 * Initial working version
