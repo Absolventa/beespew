@@ -7,10 +7,6 @@ module Beespew
       text_field Beespew.attribute, options
     end
 
-    # def honeypot(*args)
-    #   beespew_field *args
-    # end
-
     alias honeypot beespew_field
 
     private
