@@ -40,6 +40,13 @@ Add a text field to your form:
       f.text_field :beespew, placeholder: "If you are a human, leave this blank", class: 'beespew'
     end
 
+Alternatively, you can use Beespew's form helper:
+
+    form_for :comment, builder: Beespew::FormBuilder do |f|
+      # ...
+      f.honeypot, placeholder: "If you are a human, leave this blank"
+    end
+
 **Note**: Don't use `hidden_field` as bots are "smart" enough to leave those untouched.
 Use CSS to hide it for human users and avoid `display:none` and
 `visibility:hidden` here as well.
@@ -86,6 +93,7 @@ strong parameters will unwillingly disable your spam protection.
 ## Changelog
 
 ### HEAD (not released yet)
+* Add Beespew form builder with `honeypot` field
 * Make Beespew.attribute configurable ([#1](https://github.com/Absolventa/beespew/issues/1))
 
 ### 0.1.0
