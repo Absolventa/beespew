@@ -7,15 +7,15 @@ describe Beespew::FormBuilder do
     it 'returns a text field with a default css class' do
       input = subject.beespew_field
 
-      expected = '<input class="beespew" id="hive_beespew" name="hive[beespew]" type="text" />'
-      expect(input).to eql expected
+      expected = '<input class="beespew" id="hive_beespew" name="hive[beespew]" '
+      expect(input).to start_with expected
     end
 
     it 'returns a text field with a custom css class' do
       input = subject.beespew_field class: 'foobar'
 
-      expected = '<input class="foobar" id="hive_beespew" name="hive[beespew]" type="text" />'
-      expect(input).to eql expected
+      expected = '<input class="foobar" id="hive_beespew" name="hive[beespew]" '
+      expect(input).to start_with expected
     end
 
     it 'obeyes the configured Beespew.attribute' do
@@ -25,6 +25,29 @@ describe Beespew::FormBuilder do
       expected = '<input class="beespew" id="hive_sweetsformysweet" name="hive[sweetsformysweet]"'
       expect(input).to start_with expected
     end
+
+    context 'with placeholder' do
+      it 'returns an English text by default' do
+        text = "If you are human, leave this blank"
+        expect(subject.beespew_field).to match "placeholder=\"#{text}\""
+      end
+
+      it 'overrides the placeholder' do
+        input = subject.beespew_field placeholder: 'Leave this shizzle'
+        expect(input).to match "placeholder=\"Leave this shizzle\""
+      end
+
+      context 'with internationalization' do
+        before { I18n.locale = :de }
+        after  { I18n.locale = :en }
+
+        it 'uses a translated string' do
+          text = "Dieses Feld bitte nicht beschriften"
+          expect(subject.beespew_field).to match "placeholder=\"#{text}\""
+        end
+      end
+    end
+
   end
 
   describe '#honeypot' do
