@@ -1,3 +1,4 @@
+require 'beespew/engine'
 require 'beespew/model'
 
 module Beespew
