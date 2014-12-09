@@ -95,6 +95,7 @@ strong parameters will unwillingly disable your spam protection.
 ### HEAD (not released yet)
 * Add Beespew form builder with `honeypot` field
 * Make Beespew.attribute configurable ([#1](https://github.com/Absolventa/beespew/issues/1))
+* Add a default hidden style for honeypot field ([#3](https://github.com/Absolventa/beespew/issues/3))
 
 ### 0.1.0
 * Initial working version
