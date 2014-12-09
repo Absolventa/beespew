@@ -1,0 +1,27 @@
+<%= form_for @support_request, builder: Beespew::FormBuilder do |f| %>
+
+  <% unless @support_request.valid? %>
+    <ul>
+      <% @support_request.errors.full_messages.each do |err| %>
+        <li><%= err %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <p>
+    <%= f.label :subject %><br>
+    <%= f.text_field :subject %>
+  </p>
+
+  <p>
+    <%= f.label :message %><br>
+    <%= f.text_area :message %>
+  </p>
+
+  <%= f.honeypot %>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
