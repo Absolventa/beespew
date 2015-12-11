@@ -14,6 +14,8 @@ Gem::Specification.new do |s|
   s.description = "Beespew is a naive spam protection plugin for rails using a honeypot"
   s.license     = "MIT"
 
+  s.required_ruby_version = '>= 2.1'
+
   s.files         = `git ls-files`.split($/)
   s.executables   = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})

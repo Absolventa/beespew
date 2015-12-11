@@ -93,6 +93,7 @@ strong parameters will unwillingly disable your spam protection.
 ## Changelog
 
 ### HEAD (not released yet)
+* Require Ruby >= 2.1
 
 ### 0.2.0
 * Add Beespew form builder with `honeypot` field
