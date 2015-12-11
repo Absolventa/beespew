@@ -2,10 +2,13 @@ ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
 
 require 'rspec/rails'
+require 'rspec-html-matchers'
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.order = :random
+
+  config.include RSpecHtmlMatchers
 
   # Seed global randomization in this process using the `--seed` CLI option.
   # Setting this allows you to use `--seed` to deterministically reproduce

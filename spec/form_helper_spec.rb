@@ -7,23 +7,20 @@ describe Beespew::FormBuilder do
     it 'returns a text field with a default css class' do
       input = subject.beespew_field
 
-      expected = '<input class="beespew" id="hive_beespew" name="hive[beespew]" '
-      expect(input).to start_with expected
+      expect(input).to have_tag('input', with: { class: 'beespew', name: 'hive[beespew]' })
     end
 
     it 'returns a text field with a custom css class' do
       input = subject.beespew_field class: 'foobar'
 
-      expected = '<input class="foobar" id="hive_beespew" name="hive[beespew]" '
-      expect(input).to start_with expected
+      expect(input).to have_tag('input', with: { class: 'foobar' })
     end
 
     it 'obeyes the configured Beespew.attribute' do
       allow(Beespew).to receive(:attribute).and_return('sweetsformysweet')
       input = subject.beespew_field
 
-      expected = '<input class="beespew" id="hive_sweetsformysweet" name="hive[sweetsformysweet]"'
-      expect(input).to start_with expected
+      expect(input).to have_tag('input', with: { id: 'hive_sweetsformysweet', name: 'hive[sweetsformysweet]' })
     end
 
     context 'with placeholder' do
