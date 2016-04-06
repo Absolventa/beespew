@@ -93,6 +93,8 @@ strong parameters will unwillingly disable your spam protection.
 ## Changelog
 
 ### HEAD (not released yet)
+
+### 1.0.0
 * Require Ruby >= 2.1
 * Set honeypot field with a tabindex of -1
 
