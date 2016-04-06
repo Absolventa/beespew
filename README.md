@@ -96,7 +96,7 @@ strong parameters will unwillingly disable your spam protection.
 
 ### 1.0.0
 * Require Ruby >= 2.1
-* Set honeypot field with a tabindex of -1
+* Set honeypot field with a [tabindex of -1](https://www.w3.org/TR/html5/editing.html#sequential-focus-navigation-and-the-tabindex-attribute)
 
 ### 0.2.0
 * Add Beespew form builder with `honeypot` field
