@@ -45,6 +45,16 @@ describe Beespew::FormBuilder do
       end
     end
 
+    context 'with tabindex' do
+      it 'defaults to -1' do
+        expect(subject.beespew_field).to match "tabindex=\"-1\""
+      end
+
+      it 'allows overriding the tabindex' do
+        expect(subject.beespew_field(tabindex: 999)).to match "tabindex=\"999\""
+      end
+    end
+
   end
 
   describe '#honeypot' do
