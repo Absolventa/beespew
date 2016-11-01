@@ -2,7 +2,9 @@ language: ruby
 rvm:
 - 2.3.0
 - 2.2.3
-- 2.1.0
+gemfile:
+- gemfiles/rails_4.2.gemfile
+- gemfiles/rails_5.0.gemfile
 cache: bundler
 script:
 - bundle exec rspec spec

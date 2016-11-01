@@ -14,16 +14,17 @@ Gem::Specification.new do |s|
   s.description = "Beespew is a naive spam protection plugin for rails using a honeypot"
   s.license     = "MIT"
 
-  s.required_ruby_version = '>= 2.1'
+  s.required_ruby_version = '>= 2.2.2'
 
   s.files         = `git ls-files`.split($/)
   s.executables   = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths = ["lib"]
 
-  s.add_dependency "rails", ">= 4.0", '<= 5.0'
+  s.add_dependency "rails", ">= 4.0", '< 5.1'
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails", '>= 3.0.0'
   s.add_development_dependency "rspec-html-matchers"
+  s.add_development_dependency "appraisal"
 end
