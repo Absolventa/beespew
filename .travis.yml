@@ -12,3 +12,6 @@ script:
 notifications:
   webhooks:
     secure: PZ9zkk1aar0shHE87JpIE9+OgjTgYFoiK0cP+jNcuF/GjhVaypkaieKzCRldERkkz2YEi2eIqgKhybQpYAcG4q1vhpjiBpOOdLYmTsRFCSoDwt8fAlC9JRI3+D6nc4hF1y8ds9aVoYQVfCcGasIOH4KAKMbKGviPgyFIhdbIbDw=
+matrix:
+  allow_failure:
+    - rvm: 2.4.0
