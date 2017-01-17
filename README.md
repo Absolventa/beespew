@@ -94,6 +94,10 @@ strong parameters will unwillingly disable your spam protection.
 
 ### HEAD (not released yet)
 
+### 1.0.1
+* Relax rails dependency requirements
+* Freeze string literals
+
 ### 1.0.0
 * Require Ruby >= 2.1
 * Set honeypot field with a [tabindex of -1](https://www.w3.org/TR/html5/editing.html#sequential-focus-navigation-and-the-tabindex-attribute)
