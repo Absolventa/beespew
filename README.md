@@ -94,8 +94,9 @@ strong parameters will unwillingly disable your spam protection.
 
 ### HEAD (not released yet)
 
-### 1.1.0
-* Compatible with rails < 5.2
+### 2.0.0
+* Compatible with rails 5.1
+* Drop support for Rails < 5.0
 * Switch to ruby 2.4
 
 ### 1.0.1
