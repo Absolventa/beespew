@@ -1,7 +1,7 @@
 PATH
   remote: ..
   specs:
-    beespew (1.1.0)
+    beespew (2.0.0)
       rails (>= 5.0, < 5.2)
 
 GEM
