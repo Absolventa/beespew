@@ -1,6 +1,6 @@
 # Beespew [![Build Status](https://travis-ci.org/Absolventa/beespew.svg?branch=master)](https://travis-ci.org/Absolventa/beespew)
 
-**Beespew** is a lightweight spam protection plugin for Rails 4 using
+**Beespew** is a lightweight spam protection plugin for Rails using
 honeypot input fields. Beespew … honeypot … get it? :wink:
 
 ## Installation
