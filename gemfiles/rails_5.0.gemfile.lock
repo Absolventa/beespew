@@ -2,7 +2,7 @@ PATH
   remote: ..
   specs:
     beespew (2.0.0)
-      rails (>= 5.0, < 5.2)
+      rails (>= 5.0, < 6.0)
 
 GEM
   remote: https://rubygems.org/
@@ -148,4 +148,4 @@ DEPENDENCIES
   sqlite3
 
 BUNDLED WITH
-   1.15.4
+   1.16.1

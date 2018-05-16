@@ -14,7 +14,7 @@ Rails.application.configure do
 
   # Configure static asset server for tests with Cache-Control for performance.
   config.serve_static_files  = true
-  config.static_cache_control = 'public, max-age=3600'
+  config.public_file_server.headers = { 'Cache-Control' => 'public, max-age=3600' }
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
@@ -36,4 +36,6 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.active_record.sqlite3.represent_boolean_as_integer = true if Rails.version.to_f >= 5.2
 end
